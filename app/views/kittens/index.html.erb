@@ -1,2 +1,7 @@
-<h1>Kittens#index</h1>
-<p>Find me in app/views/kittens/index.html.erb</p>
+<h1>All Kittens</h1>
+
+<% @kittens.each do |k| %>
+  <%= link_to k.name, kitten_path(k) %><br>
+<% end %><br>
+
+<%= button_to 'New Kitten', new_kitten_path, method: :get %>
