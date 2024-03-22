@@ -28,9 +28,9 @@ class KittensController < ApplicationController
   end
 
   def update
-    @kitten = Kitten.edit(kitten_params)
+    @kitten = Kitten.find(params[:id])
 
-    if @kitten.update
+    if @kitten.update(kitten_params)
       flash[:notice] = 'Kitten update ;)'
       redirect_to @kitten
     else

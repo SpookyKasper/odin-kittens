@@ -4,3 +4,5 @@
   <strong>Softeness: </strong><%= @kitten.softness %><br>
   <strong>Cuteness: </strong><%= @kitten.cuteness%><br>
 </p>
+
+<%= button_to "Edit #{@kitten.name}", edit_kitten_path, method: :get %>
