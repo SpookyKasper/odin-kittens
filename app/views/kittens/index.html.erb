@@ -1,7 +1,7 @@
 <h1>All Kittens</h1>
 
 <% @kittens.each do |k| %>
-  <%= link_to k.name, kitten_path(k) %><br>
+  <%= link_to k.name, kitten_path(k) %> <%= delete_kitten_button(k) %>
 <% end %><br>
 
 <%= button_to 'New Kitten', new_kitten_path, method: :get %>
